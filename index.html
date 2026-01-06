@@ -1,153 +1,303 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalyon Marine | Ufku inşa et</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<nav class="navbar">
-    <div class="nav-container">
-        <div class="logo">
-            <img src="src/img/kalyon_logo_hbb_2.png" alt="Logo">
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="src/img/kalyın_generate_logo.png" alt="Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Anasayfa</a></li>
+                <!-- <li><a href="#mission">Misyon</a></li> -->
+                <li><a href="#about">Hakkımızda</a></li>
+                <li><a href="#impact">Etki</a></li>
+                <li><a href="#solutions">Çözümlerimiz</a></li>
+                <li><a href="#contact" class="nav-cta">İletişim</a></li>
+            </ul>
         </div>
-        <ul class="nav-links">
-            <li><a href="#home">Anasayfa</a></li>
-            <li><a href="#mission">Misyon</a></li>
-            <li><a href="#impact">Etki</a></li>
-            <li><a href="#solutions">Çözümlerimiz</a></li>
-              <li><a href="#contact" class="nav-cta">İletişim</a></li>
-        </ul>
-    </div>
-</nav>
+    </nav>
 
-<section id="home" class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content scene-dark">
-        <h2 class="reveal">
-            <i>Kalyon Marine</i>
-        </h2>
-        <p class="reveal">
-            Yat İnşa ve Donatım Sektöründe Uzmanlık
-        </p>
-        <div class="hero-actions reveal">
-            <a href="#mission" class="btn-primary">Keşfet</a>
-            <a href="#impact" class="btn-outline">Bize Ulaşın</a>
-        </div>
-    </div>
-</section>
-
-<section id="mission" class="mission-section scene-soft">
-    <div class="mission-grid">
-        <div class="mission-text reveal">
-            <span class="tag">BİZ KİMİZ</span>
-            <h2>Sorumluluk Bilinciyle<br>Maviliklere</h2>
-            <p>
-                Sürdürülebilir bir ekosistem ve profesyonel dokunuşlara maruz kalmış projeler
-                üretiyor, estetik anlayışını mühendislik ile birleştiriyoruz.
+    <section id="home" class="homehero">
+        <div class="homehero-overlay"></div>
+        <div class="homehero-content">
+            <h2 class="homereveal">
+                <i>Kalyon Marine</i>
+            </h2>
+            <p class="homereveal">
+                Yat İnşa ve Donatım Sektöründe Uzmanlık
             </p>
+            <div class="homehero-actions reveal">
+                <a href="#about" class="btn-primary-home">Keşfet</a>
+                <a href="#contact" class="btn-outline-home">Bize Ulaşın</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section id="mission" class="mission-section scene-soft">
+        <div class="mission-grid">
+            <div class="mission-text reveal">
+                <span class="tag">BİZ KİMİZ</span>
+                <h2>Sorumluluk Bilinciyle<br>Maviliklere</h2>
+                <p>
+                    Sürdürülebilir bir ekosistem ve profesyonel dokunuşlara maruz kalmış projeler
+                    üretiyor, estetik anlayışını mühendislik ile birleştiriyoruz.
+                </p>
+            </div>
+
+            <div class="mission-image reveal">
+                <img src="src/img/worker_2.png">
+            </div>
+        </div>
+    </section> -->
+
+    <section id="about" class="mission-section scene-dark">
+        <div class="mission-grid">
+
+            <div class="mission-text reveal">
+                <span class="tag">HAKKIMIZDA</span>
+                <h2>Deneyim, Üretim<br>ve Saha Gücü</h2>
+                <p>
+                    Kalyon Marine olarak faaliyet gösteren firmamız, gemi teçhiz donatım alanında imalat ve
+                    montaj faaliyetleri göstermek amacıyla kurulmuştur. Gemi inşaa alanında performansın artırılması
+                    hedefiyle yola çıkan
+                    firmamız, kullandığı yenilikçi yöntem ve ileri teknoloji ile yüksek
+                    kaliteli ürünler sunarak sektörde kendine sağlam bir yer edinmeyi amaçlamaktadır.
+                </p>
+            </div>
+
+            <!-- ABOUT CARDS -->
+            <div class="about-cards reveal">
+
+                <a href="services.html" class="about-card scene-dark">
+                    <span class="card-no">⚓︎</span>
+                    <h4>Misyon</h4>
+                    <!-- <p>Özel imalat ve atölye çözümleri</p> -->
+                </a>
+
+                <a href="#solutions" class="about-card scene-dark">
+                    <span class="card-no">⚓︎</span>
+                    <h4>Vizyon</h4>
+                    <!-- <p>Sahada aktif profesyonel ekip</p> -->
+                </a>
+
+                <a href="#contact" class="about-card">
+                    <span class="card-no">⚓︎</span>
+                    <h4>Takım</h4>
+                    <!-- <p>Proje boyunca kesintisiz iletişim</p> -->
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section id="impact" class="impact-section ">
+        <div class="section-header reveal">
+            <h2>Yarattığımız Etki</h2>
+            <p>Her adım ölçülebilir ve şeffaftır.</p>
         </div>
 
-        <div class="mission-image reveal">
-            <img src="src/img/worker_2.png">
+        <div class="impact-list">
+            <div class="impact-item reveal">
+                <span>01</span>
+                <h3>Şeffaflık</h3>
+                <p>Tüm projeler anlık ve denetlenebilir raporlanır.</p>
+            </div>
+
+            <div class="impact-item reveal">
+                <span>02</span>
+                <h3>Gönüllü Gücü</h3>
+                <p>Küresel ölçekte aktif saha operasyonları yürütülür.</p>
+            </div>
+
+            <div class="impact-item reveal">
+                <span>03</span>
+                <h3>Eğitim Odaklılık</h3>
+                <p>Gelecek nesiller için kalıcı bilinç oluşturulur.</p>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="impact" class="impact-section scene-dark">
-    <div class="section-header reveal">
-        <h2>Yarattığımız Etki</h2>
-        <p>Her adım ölçülebilir ve şeffaftır.</p>
-    </div>
-
-    <div class="impact-list">
-        <div class="impact-item reveal">
-            <span>01</span>
-            <h3>Şeffaflık</h3>
-            <p>Tüm projeler anlık ve denetlenebilir raporlanır.</p>
-        </div>
-
-        <div class="impact-item reveal">
-            <span>02</span>
-            <h3>Gönüllü Gücü</h3>
-            <p>Küresel ölçekte aktif saha operasyonları yürütülür.</p>
-        </div>
-
-        <div class="impact-item reveal">
-            <span>03</span>
-            <h3>Eğitim Odaklılık</h3>
-            <p>Gelecek nesiller için kalıcı bilinç oluşturulur.</p>
-        </div>
-    </div>
-</section>
-
-<section id="solutions" class="solutions-section scene-soft">
-    <div class="solutions-header reveal">
+   <section id="solutions" class="solutions-hero scene-dark">
+    <div class="solutions-hero-inner">
         <span class="tag">ÇÖZÜMLERİMİZ</span>
-        <h4>Denizler İçin Geliştirdiğimiz Yaklaşımlar</h4>
+        <h1>Denizcilik Odaklı<br>Teknik Çözümler</h1>
         <p>
-            Çevresel sürdürülebilirliği estetik, teknoloji ve saha deneyimiyle
-            birleştiren bütüncül çözümler sunuyoruz.
+            Gemi inşa ve donatım projelerinde, sahada test edilmiş
+            montaj ve imalat çözümleri sunuyoruz.
         </p>
-    </div>
-
-    <div class="solutions-grid">
-    <div class="solution-img reveal">
-    <img src="src/img/worker.png">
-
-    <div class="solution-overlay">
-        <h5>Proje Tasarımı</h5>
-        <p>Mühendislik ve planlama süreçleri</p>
-    </div>
-    </div>
-      <div class="solution-img reveal">
-    <img src="src/img/worker_2.png">
-
-    <div class="solution-overlay">
-        <h5>Proje Tasarımı</h5>
-        <p>Mühendislik ve planlama süreçleri</p>
-    </div>
-    </div>
-    <div class="solution-img reveal"><img src="src/img/worker_3.png"></div>
-    <div class="solution-img reveal"><img src="src/img/worker_4.png"></div>
-    <div class="solution-img reveal"><img src="src/img/worker_5.png"></div>
+    </div> 
+    <span class="tag">ÇÖZÜMLERİ KEŞFET</span>
+    
+   <div class="scroll-down-btn" onclick="scrollToSolutions()">
+   
+    <span class="anchor">⚓︎</span>
 </div>
 
+
+</button>
+</section>
+
+<section id="solutions-detail" class="solutions-detail scene-soft">
+  <div class="solutions-layout">
+
+    <!-- LEFT MENU -->
+    <aside class="solutions-menu">
+      <ul>
+        <li class="active" data-solution="yat">Yat İnşa Hizmetleri</li>
+        <li data-solution="aft">AFT Door</li>
+        <li data-solution="asma">Asma Tavan & İmalat</li>
+        <li data-solution="shell">Shelldoor</li>
+        <li data-solution="kapi">Kapı Montajları</li>
+        <li data-solution="hatch">Hatch Montajları</li>
+        <li data-solution="windlass">Windlass Montajı</li>
+        <li data-solution="stabilizer">Stabilizer Montajı</li>
+        <li data-solution="shaft">Shaft Bosası</li>
+      </ul>
+    </aside>
+
+    <!-- CONTENT -->
+    <div class="solutions-content" id="solutionContent">
+      <!-- JS BURAYI DOLDURACAK -->
+    </div>
+
+  </div>
 </section>
 
 
-<section id="contact" class="contact-section scene-dark">
+<!-- <section class="solution-process scene-dark">
+    <div class="process-grid">
+        <div>
+            <span>01</span>
+            <h4>Analiz</h4>
+            <p>Proje gereksinimlerinin teknik olarak değerlendirilmesi</p>
+        </div>
+        <div>
+            <span>02</span>
+            <h4>Uygulama</h4>
+            <p>Sahada kontrollü montaj ve üretim süreci</p>
+        </div>
+        <div>
+            <span>03</span>
+            <h4>Teslim</h4>
+            <p>Test edilmiş ve raporlanmış teslimat</p>
+        </div>
+    </div>
+</section> -->
 
-    <div class="contact-container"> 
-        <div class="contact-text reveal">
-            <span class="tag">İLETİŞİM</span>
-            <h2>Bizimle<br>İletişime Geçin</h2>
-            <p>
-                Projelerimiz, iş birlikleri veya genel sorularınız için
-                bizimle iletişime geçebilirsiniz.
-            </p>
+<!-- <section class="solution-cta scene-dark">
+    <h3>Projeniz için bizimle iletişime geçin</h3>
+    <a href="contact.html" class="btn-primary">
+        Teklif Alın
+    </a>
+</section> -->
+
+
+    <!-- <section id="contact" class="contact-section scene-dark">
+
+        <div class="contact-container">
+            <div class="contact-text reveal">
+                <span class="tag">İLETİŞİM</span>
+                <h2>Bizimle<br>İletişime Geçin</h2>
+                <p>
+                    Projelerimiz, iş birlikleri veya genel sorularınız için
+                    bizimle iletişime geçebilirsiniz.
+                </p>
+            </div>
+
+            <form class="contact-form reveal">
+                <input type="text" placeholder="Ad Soyad" required>
+                <input type="email" placeholder="E-posta" required>
+                <textarea rows="4" placeholder="Mesajınız"></textarea>
+                <button type="submit">Gönder</button>
+            </form>
+        </div>
+    </section> -->
+
+    <section id="contact" class="contact-section scene-dark">
+
+        <!-- TOP: FORM -->
+        <div class="contact-container">
+            <div class="contact-text reveal">
+                <span class="tag">İLETİŞİM</span>
+                <h2>Bizimle<br>İletişime Geçin</h2>
+                <p>
+                    Projelerimiz, iş birlikleri veya genel sorularınız için
+                    bizimle iletişime geçebilirsiniz.
+                </p>
+            </div>
+
+            <form class="contact-form reveal">
+                <input type="text" placeholder="Ad Soyad" required>
+                <input type="email" placeholder="E-posta" required>
+                <textarea rows="4" placeholder="Mesajınız"></textarea>
+                <button type="submit">Gönder</button>
+            </form>
         </div>
 
-        <form class="contact-form reveal">
-            <input type="text" placeholder="Ad Soyad" required>
-            <input type="email" placeholder="E-posta" required>
-            <textarea rows="4" placeholder="Mesajınız"></textarea>
-            <button type="submit">Gönder</button>
-        </form>
-    </div>
-</section>
-<!-- Lenis -->
-<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.39/bundled/lenis.min.js"></script>
+        <!-- DIVIDER -->
+        <div class="contact-divider"></div>
 
-<!-- GSAP -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+        <!-- BOTTOM: ADDRESS + MAP -->
+        <div class="contact-map-wrapper">
 
-<script src="script.js"></script>
+            <!-- Address -->
+            <div class="map-address reveal">
+                <span class="tag">ADRES</span>
+                <h4>Merkez Ofis</h4>
+                <p>
+                    Çiftlik, Atatürk Blv. No:339 Kat:2 D:7<br>
+                    41100 Gölcük / Kocaeli
+                </p>
+
+                <a class="map-open" target="_blank" rel="noopener"
+                    href="https://www.google.com/maps?q=40.7139,29.8296&z=16">
+                    Haritada Aç
+                </a>
+
+            </div>
+
+            <!-- Map -->
+            <div class="map-embed reveal">
+                <div class="map-pin" aria-hidden="true">
+                    <span>⚓</span>
+                </div>
+
+                <iframe
+                    src="https://www.google.com/maps?q=Çiftlik,+Atatürk+Blv.+No:339,+Gölcük+Kocaeli&z=15&output=embed"
+                    loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+    <!-- Lenis -->
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.39/bundled/lenis.min.js"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>
