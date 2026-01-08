@@ -1,4 +1,5 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => 
+  {
 
     /* =====================
        NAVBAR SCROLL EFFECT
@@ -99,6 +100,25 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
+/* =====================
+   HAMBURGER MENU
+===================== */
+
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+});
+
+/* Menü tıklanınca kapansın */
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+    });
+});
 
 /* =====================
    MAPBOX – CUSTOM MARKER
