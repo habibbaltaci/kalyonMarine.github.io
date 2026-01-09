@@ -1133,65 +1133,92 @@ section {
 .solution-table tr:not(:last-child){
     border-bottom: 1px solid rgba(0,0,0,.06);
 }
-.scroll-down-btn {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 160px;
-    height: 70px;
-    cursor: pointer;
+/* =====================
+   SCROLL HINT (SVG CHEVRON)
+===================== */
+
+.scroll-down-btn{
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  text-align: center;
+  z-index: 10;
+  user-select: none;
 }
 
-/* ÜÇGEN ÇERÇEVE */
-/* .scroll-down-btn::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    clip-path: polygon(50% 100%, 0 0, 100% 0);
-   
-    background: var(--accent);
-    transition: background 0.3s ease;
-} */
-.scroll-down-btn::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-
-    clip-path: polygon(
-        50% 100%,
-        4% 6%,
-        10% 0%,
-        90% 0%,
-        96% 6%
-    );
-
-    background: linear-gradient(
-        180deg,
-        #d3bc8a 0%,
-        #bfa36f 55%,
-        #a88f5f 100%
-    );
-
-    box-shadow:
-        inset 0 1px 0 rgba(255,255,255,0.25),
-        inset 0 -2px 0 rgba(0,0,0,0.25),
-        0 10px 20px rgba(0,0,0,0.35);
-
-    transition: all 0.35s ease;
-}
-.scroll-down-btn::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    clip-path: inherit;
-    background: rgba(0,0,0,0.25);
-    transform: translateY(4px);
-    filter: blur(6px);
-    z-index: -1;
+.scroll-down-btn .scroll-text{
+  display: block;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 6px;
+  font-weight: 400;
 }
 
-/* ÇAPA */
+/* SVG wrapper */
+.scroll-down-btn .scroll-icon{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Chevron SVG */
+.scroll-down-btn .chevron{
+  display: block;
+}
+
+.scroll-down-btn .chevron path{
+  stroke: rgba(255,255,255,0.85);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  /* stroke-dash setup */
+  stroke-dasharray: 28;
+  stroke-dashoffset: 28;
+
+  animation: chevronDraw 1.6s ease-in-out infinite;
+}
+
+/* Hover: sadece netleşsin */
+.scroll-down-btn:hover .scroll-text{
+  color: #ffffff;
+}
+.scroll-down-btn:hover .chevron path{
+  stroke: #ffffff;
+}
+
+/* Draw + drift loop (premium) */
+@keyframes chevronDraw{
+  0%{
+    opacity: 0;
+    transform: translateY(-6px);
+    stroke-dashoffset: 28;
+  }
+  30%{
+    opacity: 1;
+  }
+  55%{
+    stroke-dashoffset: 0;     /* çizim tamam */
+  }
+  80%{
+    opacity: 0;
+    transform: translateY(10px);
+    stroke-dashoffset: 0;
+  }
+  100%{
+    opacity: 0;
+    transform: translateY(10px);
+    stroke-dashoffset: 28;    /* tekrar başa sar */
+  }
+}
+
+
 .anchor {
     position: absolute;
     top: 10px;
@@ -1424,4 +1451,150 @@ section {
 
 .hamburger.active span:nth-child(3) {
     transform: rotate(-45deg) translate(6px, -6px);
+}
+/* =====================
+   TEAM MODAL
+===================== */
+
+.modal-overlay{
+  position: fixed;
+  inset: 0;
+  background: rgba(7,19,29,0.75);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .35s ease;
+  z-index: 2000;
+}
+
+.modal-overlay.active{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-container{
+  background: #ffffff;
+  border-radius: 18px;
+  max-width: 960px;
+  width: 90%;
+  padding: 48px 56px 56px;
+  position: relative;
+  box-shadow: 0 40px 90px rgba(0,0,0,.35);
+  transform: translateY(30px);
+  transition: transform .45s ease;
+}
+
+.modal-overlay.active .modal-container{
+  transform: translateY(0);
+}
+
+/* Close */
+.modal-close{
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #555;
+}
+
+/* Title */
+.modal-title{
+  font-size: 2rem;
+  margin-bottom: 40px;
+  text-align: center;
+  color: var(--primary);
+}
+
+/* Grid */
+.team-grid{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 36px;
+}
+
+/* Card */
+.team-card{
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 20px 45px rgba(0,0,0,.08);
+  text-align: left;
+}
+
+.team-card img{
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  filter: grayscale(100%);
+}
+
+.team-card h4{
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.team-card .role{
+  font-size: .85rem;
+  color: #777;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.contact-list{
+  list-style: none;
+  font-size: .82rem;
+  color: #555;
+}
+
+.contact-list li{
+  margin-bottom: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px){
+  .team-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .modal-container{
+    padding: 36px 28px 44px;
+  }
+}
+/* =====================
+   MISSION MODAL
+===================== */
+
+.modal-mission{
+  max-width: 720px;
+  text-align: left;
+}
+
+.mission-content{
+  padding: 20px 10px 10px;
+}
+
+.mission-icon{
+  display: inline-block;
+  font-size: 20px;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.mission-content h3{
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+
+.mission-content p{
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #555;
+  max-width: 560px;
 }

@@ -87,19 +87,19 @@
             <!-- ABOUT CARDS -->
             <div class="about-cards reveal">
 
-                <a href="services.html" class="about-card scene-dark">
+                <a id="btnMission" href="#" class="about-card scene-dark">
                     <span class="card-no">⚓︎</span>
                     <h4>Misyon</h4>
                     <!-- <p>Özel imalat ve atölye çözümleri</p> -->
                 </a>
 
-                <a href="#solutions" class="about-card scene-dark">
+                <a id="btnVision" href="#" class="about-card scene-dark">
                     <span class="card-no">⚓︎</span>
                     <h4>Vizyon</h4>
                     <!-- <p>Sahada aktif profesyonel ekip</p> -->
                 </a>
 
-                <a href="#contact" class="about-card">
+                <a id="btnTeam" href="#" class="about-card scene-dark">
                     <span class="card-no">⚓︎</span>
                     <h4>Takım</h4>
                     <!-- <p>Proje boyunca kesintisiz iletişim</p> -->
@@ -148,10 +148,16 @@
         </div>
         <span class="tag">ÇÖZÜMLERİ KEŞFET</span>
 
-        <div class="scroll-down-btn" onclick="scrollToSolutions()">
+        <div class="scroll-down-btn" onclick="scrollToSolutions()" aria-label="Scroll down">
+            <span class="scroll-text">Kaydır</span>
 
-            <span class="anchor">⚓︎</span>
+            <span class="scroll-icon" aria-hidden="true">
+                <svg class="chevron" width="64" height="64" viewBox="0 0 22 12" fill="none">
+                    <path d="M2 2 L11 10 L20 2" />
+                </svg>
+            </span>
         </div>
+
 
 
         </button>
@@ -163,15 +169,15 @@
             <!-- LEFT MENU -->
             <aside class="solutions-menu">
                 <ul>
-                    <li class="active" data-solution="yat">Yat İnşa Hizmetleri</li>
-                    <li data-solution="aft">AFT Door</li>
-                    <li data-solution="asma">Asma Tavan & İmalat</li>
-                    <li data-solution="shell">Shelldoor</li>
+                    <li class="active" data-solution="yat">İmalat</li>
+                    <li data-solution="aft">Montaj</li>
+                    <li data-solution="asma">Mühendislik</li>
+                    <!-- <li data-solution="shell">Shelldoor</li>
                     <li data-solution="kapi">Kapı Montajları</li>
                     <li data-solution="hatch">Hatch Montajları</li>
                     <li data-solution="windlass">Windlass Montajı</li>
                     <li data-solution="stabilizer">Stabilizer Montajı</li>
-                    <li data-solution="shaft">Shaft Bosası</li>
+                    <li data-solution="shaft">Shaft Bosası</li> -->
                 </ul>
             </aside>
 
@@ -293,8 +299,6 @@
     </section>
 
 
-
-
     <!-- Lenis -->
     <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.39/bundled/lenis.min.js"></script>
 
@@ -303,6 +307,98 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
     <script src="script.js"></script>
+
+    <!-- =====================
+     TEAM MODAL
+===================== -->
+    <div id="teamModal" class="modal-overlay" aria-hidden="true">
+        <div class="modal-container" role="dialog" aria-modal="true">
+
+            <button class="modal-close" aria-label="Kapat">&times;</button>
+
+            <h3 class="modal-title">Takım</h3>
+
+            <div class="team-grid">
+
+                <!-- TEAM CARD -->
+                <div class="team-card">
+                    <img src="src/teamPerson.png" alt="Aykut Çolakoğlu">
+                    <h4>Habib Baltacı</h4>
+                    <span class="role">IT & Digital Transformation Manager</span>
+
+                    <ul class="contact-list">
+                        <li>📞 +90 537 323 21 89</li>
+                        <li>✉️ aykut.colakoglu@kantec.com.tr</li>
+                        <li>🌍 Türkçe, İngilizce</li>
+                        <li>🔗 LinkedIn</li>
+                    </ul>
+                </div>
+
+                <!-- TEAM CARD -->
+                <div class="team-card">
+                    <img src="src/teamPerson.png" alt="İlker Cankat Gödekoğlu">
+                    <h4>İlker Cankat Gödekoğlu</h4>
+                    <span class="role">Bölge Satış Mühendisi</span>
+
+                    <ul class="contact-list">
+                        <li>📞 +90 533 400 60 50</li>
+                        <li>✉️ cankat.godekoglu@kantec.com.tr</li>
+                        <li>🌍 Türkçe, Rusça, Ukraynaca, İngilizce</li>
+                        <li>🔗 LinkedIn</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+<!-- =====================
+     MISSION MODAL
+===================== -->
+<div id="missionModal" class="modal-overlay" aria-hidden="true">
+  <div class="modal-container modal-mission" role="dialog" aria-modal="true">
+
+    <button class="modal-close" aria-label="Kapat">&times;</button>
+
+    <div class="mission-content">
+      <span class="mission-icon">⚓︎</span>
+      <h3>Misyon</h3>
+
+      <p>
+        Gemi inşa ve bakım süreçlerinde ihtiyaç duyulan her türlü teçhiz donatım
+        malzemelerini en iyi kalitede üretmek ve müşterilerimizin beklentilerini
+        aşmaktır.
+        <br><br>
+        Gelişmiş üretim teknikleri ve en son teknolojiyi kullanarak, sektördeki
+        en yenilikçi çözümleri sunuyoruz.
+      </p>
+    </div>
+
+  </div>
+</div>
+<!-- =====================
+   VISION MODAL
+===================== -->
+<div id="visionModal" class="modal-overlay" aria-hidden="true">
+  <div class="modal-container modal-mission" role="dialog" aria-modal="true">
+
+    <button class="modal-close" aria-label="Kapat">&times;</button>
+
+    <div class="mission-content">
+      <span class="mission-icon">⚓︎</span>
+      <h3>Misyon</h3>
+
+      <p>
+        Gemi inşa ve bakım süreçlerinde ihtiyaç duyulan her türlü teçhiz donatım
+        malzemelerini en iyi kalitede üretmek ve müşterilerimizin beklentilerini
+        aşmaktır.
+        <br><br>
+        Gelişmiş üretim teknikleri ve en son teknolojiyi kullanarak, sektördeki
+        en yenilikçi çözümleri sunuyoruz.
+      </p>
+    </div>
+
+  </div>
+</div>
 
 </body>
 
