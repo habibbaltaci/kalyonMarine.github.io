@@ -1752,3 +1752,86 @@ section {
         margin: 0 auto;
     }
 }
+/* =====================
+   SCROLL TO TOP – PREMIUM
+===================== */
+
+#scrollTopBtn {
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+  width: 48px;
+  height: 48px;
+
+  background: rgba(29, 78, 99, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(191, 163, 111, 0.35);
+  border-radius: 14px;
+
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+
+  transition:
+    opacity 0.45s ease,
+    transform 0.45s ease,
+    background 0.3s ease;
+
+  z-index: 1200;
+}
+
+/* SVG */
+#scrollTopBtn svg path {
+  stroke: #ffffff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Visible state */
+#scrollTopBtn.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Hover – subtle */
+#scrollTopBtn:hover {
+  background: var(--accent);
+}
+
+/* Mobile – biraz yukarı al */
+@media (max-width: 768px) {
+  #scrollTopBtn {
+    right: 20px;
+    bottom: 20px;
+  }
+}
+/* Anchor SVG */
+#scrollTopBtn svg {
+  width: 20px;
+  height: 20px;
+}
+
+#scrollTopBtn svg path,
+#scrollTopBtn svg line,
+#scrollTopBtn svg circle {
+  stroke: #ffffff;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+#scrollTopBtn:hover svg {
+  animation: anchorFloat 1.4s ease-in-out infinite;
+}
+
+@keyframes anchorFloat {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
+  100% { transform: translateY(0); }
+}

@@ -312,6 +312,25 @@ if (btnVision && visionModal) {
     if (e.key === "Escape") closeVisionModal();
   });
 }
+/* =====================
+   SCROLL TO TOP BUTTON
+===================== */
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+if (scrollTopBtn) {
+  window.addEventListener("scroll", () => {
+    scrollTopBtn.classList.toggle("show", window.scrollY > 500);
+  });
+
+  scrollTopBtn.addEventListener("click", () => {
+    // Lenis varsa onunla, yoksa native
+    if (window.lenis) {
+      window.lenis.scrollTo(0, { duration: 1.2 });
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  });
+}
 
 });
 /* =====================
@@ -353,3 +372,4 @@ const solutionsData = {
     }
   }
 };
+
